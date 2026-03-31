@@ -1,5 +1,5 @@
-class MyException extends Exception {
-    MyException(String s) {
+class IvalidAgeException extends Exception {
+    IvalidAgeException(String s) {
         super(s);
     }
 }
@@ -8,10 +8,10 @@ public class UserdefinedException {
         int age = 17;
         try {
             if (age < 18) {
-                throw new MyException("Age must be greater than 18");
+                throw new IvalidAgeException("Age must be greater than 18");
             }
-        } catch (MyException e) {
-            System.out.println("Caught the exception: " + e.getMessage());
+        } catch (IvalidAgeException e) {
+            System.out.println( e);
         } finally {
             System.out.println("This block is always executed.");
 
